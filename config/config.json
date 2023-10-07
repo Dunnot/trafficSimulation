@@ -1,5 +1,5 @@
 {
-    "api_key": "AIzaSyCqEltZ7jTlAKv6RzSaLr-cTX06QdLUWAI",
+    "api_key": "KEY",
     "log_path": "logs/",
     "responses_path": "data/responses/",
     "csv_file": "data/corners/corners.csv",
