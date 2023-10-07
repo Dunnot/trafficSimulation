@@ -1,8 +1,0 @@
-{
-    "api_key": "KEY",
-    "log_path": "logs/",
-    "responses_path": "data/responses/",
-    "csv_file": "data/corners/corners.csv",
-    "number_requests_per_hour": 100,
-    "end_date": "2023-10-5"
-}
