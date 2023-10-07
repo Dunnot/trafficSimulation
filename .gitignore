@@ -1,7 +1,7 @@
 
 DevEnv/
 data/responses
-config/config.json
+config/
 
 
 # Byte-compiled / optimized / DLL files
