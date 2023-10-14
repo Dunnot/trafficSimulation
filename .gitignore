@@ -166,5 +166,4 @@ cython_debug/
 #.idea/
 
 config/config.json
-config/config.json
-config/config.json
+logs/log_request.txt
