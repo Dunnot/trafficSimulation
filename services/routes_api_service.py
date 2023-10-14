@@ -38,12 +38,14 @@ class RouteAPI:
             "routingPreference": "TRAFFIC_AWARE",
             "polylineEncoding": "GEO_JSON_LINESTRING"
         }
-
-        response = requests.post(self.base_url, headers=headers, data=json.dumps(data))
-
-        if response.status_code == 200:
-            response_json = response.json()
-            return Response(success=True, data=response_json)
-        else:
-            error_message = f"Error in API request. Status code: {response.status_code}"
+        try:
+            response = requests.post(self.base_url, headers=headers, data=json.dumps(data))
+            if response.status_code == 200:
+                response_json = response.json()
+                return Response(success=True, data=response_json)
+            else:
+                error_message = f"Error in API request. Status code: {response.status_code}"
+                return Response(success=False, error_message=error_message)
+        except requests.exceptions.RequestException as e:
+            error_message = f"Error in API request. Status code: {e}"
             return Response(success=False, error_message=error_message)
